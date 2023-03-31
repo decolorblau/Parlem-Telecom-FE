@@ -1,0 +1,84 @@
+{
+  "clients": [
+    {
+      "_id": 555555,
+      "docType": "nif",
+      "docNum": "11223344E",
+      "email": "it@parlem.com",
+      "customerId": "11111",
+      "givenName": "Enriqueta",
+      "familyName1": "Parlem",
+      "phone": "668668668"
+    },
+    {
+      "_id": 666666,
+      "docType": "nif",
+      "docNum": "11340091E",
+      "email": "marieta@parlem.com",
+      "customerId": "22222",
+      "givenName": "Marieta",
+      "familyName1": "LLeó",
+      "phone": "622668228"
+    },
+    {
+      "_id": 111111,
+      "docType": "nif",
+      "docNum": "11340091E",
+      "email": "ermessenda@parlem.com",
+      "customerId": "33333",
+      "givenName": "Ermessenda",
+      "familyName1": "Carcassona",
+      "phone": "612345228"
+    }
+  ],
+  "productes": [
+    {
+      "_id": 1111111,
+      "productName": "FIBRA 1000 ADAMO",
+      "productTypeName": "ftth",
+      "numeracioTerminal": 933933933,
+      "soldAt": "2019-01-09 14:26:17",
+      "customerId": "11111"
+    },
+    {
+      "_id": 1234567,
+      "productName": "FIBRA 600 ADAMO",
+      "productTypeName": "ft6h",
+      "numeracioTerminal": 934934934,
+      "soldAt": "2021-01-03 18:26:17",
+      "customerId": "22222"
+    },
+    {
+      "_id": 1111112,
+      "productName": "FIBRA 1000 ADAMO",
+      "productTypeName": "ftth",
+      "numeracioTerminal": 935935935,
+      "soldAt": "2023-01-09 12:24:36",
+      "customerId": "33333"
+    },
+    {
+      "_id": 1111113,
+      "productName": "MOVIL 25",
+      "productTypeName": "tm25",
+      "numeracioTerminal": 633933933,
+      "soldAt": "2020-03-14 14:26:17",
+      "customerId": "11111"
+    },
+    {
+      "_id": 1111114,
+      "productName": "MOVIL 50",
+      "productTypeName": "tm50",
+      "numeracioTerminal": 644944944,
+      "soldAt": "2017-12-11 10:06:10",
+      "customerId": "33333"
+    },
+    {
+      "_id": 1111115,
+      "productName": "TV AGL",
+      "productTypeName": "tva",
+      "numeracioTerminal": 222208,
+      "soldAt": "2022-11-11 15:01:17",
+      "customerId": "33333"
+    }
+  ]
+}
