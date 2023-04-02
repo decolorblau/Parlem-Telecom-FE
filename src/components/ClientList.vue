@@ -7,16 +7,11 @@
           type="text"
           class="form-control"
           v-model="search"
-          placeholder="Buscar per identificació"
+          placeholder="Buscar"
           aria-label="Search"
           aria-describedby="search"
         />
-        <button
-          class="btn btn-outline-secondary d-flex align-items-center"
-          type="button"
-          id="search"
-          @click="getClients(search)"
-        >
+        <button class="btn btn-outline-secondary d-flex align-items-center" id="search">
           <IconSearch />
         </button>
       </div>
@@ -53,12 +48,17 @@ export default {
       return this.clientStore.clients
     }
   },
+  watch: {
+    async search(newValue) {
+      await this.getClients(newValue)
+    }
+  },
   created() {
     this.getClients()
   },
   methods: {
-    async getClients(search) {
-      await this.clientStore.getClients()
+    async getClients(search = '') {
+      await this.clientStore.getClients(search)
     }
   }
 }
