@@ -9,10 +9,18 @@
 </template>
 
 <script>
+import { useClientStore } from '../stores/ClientStore'
+
 export default {
   name: 'NotFound',
+  setup() {
+    const clientStore = useClientStore()
+    return { clientStore }
+  },
   methods: {
-    redirectToHome() {}
+    redirectToHome() {
+      return this.clientStore.redirectToHome()
+    }
   }
 }
 </script>

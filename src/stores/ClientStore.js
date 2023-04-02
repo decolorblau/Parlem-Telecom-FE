@@ -1,4 +1,6 @@
 import { defineStore } from 'pinia'
+import router from '../router'
+import paths from '../router/paths'
 
 export const useClientStore = defineStore('ClientStore', {
   state: () => ({
@@ -10,5 +12,12 @@ export const useClientStore = defineStore('ClientStore', {
       this.clients = await response.json()
     }
   },
-  getters: {}
+  getters: {
+    redirectToHome() {
+      router.push(paths.home)
+    },
+    redirectToClientsList() {
+      router.push(paths.clients)
+    }
+  }
 })
