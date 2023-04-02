@@ -1,4 +1,4 @@
-# PARLEM TELECOM TEST TÉCNIC FRONT-END
+# PARLEM TELECOM TEST TÈCNIC FRONT-END
 
 Aquest test tècnic està realitzat amb la nova versió de Vue3, que utilitza una compilació basada en Vite, amb Pinia com a gestor dels stores i Bootstrap amb Sass pels estils.
 
