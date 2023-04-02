@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import NotFoundView from '../views/NotFoundView.vue'
 import paths from './paths'
 
 const { home, notFound, clients, detail } = paths
@@ -28,7 +29,7 @@ const router = createRouter({
     {
       path: notFound,
       name: 'NotFound',
-      component: HomeView
+      component: NotFoundView
     }
   ]
 })
