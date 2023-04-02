@@ -15,9 +15,4 @@ export default {
 }
 </script>
 
-<style>
-.fullPage {
-  min-height: calc(100vh - 80px);
-  background-color: rgb(245, 245, 245);
-}
-</style>
+<style></style>
