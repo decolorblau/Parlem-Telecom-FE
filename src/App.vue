@@ -1,22 +1,20 @@
 <template>
-  <nav class="navbar p-0">
-    <img :src="logo" alt="logo parlem telecom" height="80" />
-  </nav>
+  <NavbarParlem v-if="hasNavbar" />
   <RouterView />
 </template>
 
 <script>
-import LogoParlem from './assets/logo-parlem.png'
 import { RouterView } from 'vue-router'
-
+import NavbarParlem from './components/Navbar.vue'
 export default {
-  name: 'ClientsView',
+  name: 'App',
   components: {
-    RouterView
+    RouterView,
+    NavbarParlem
   },
   computed: {
-    logo() {
-      return LogoParlem
+    hasNavbar() {
+      return this.$route.name === 'clients' || this.$route.name === 'detail'
     }
   }
 }
