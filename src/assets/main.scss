@@ -2,3 +2,21 @@ $primary: rgb(255, 191, 1);
 
 // Include bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
+
+.fullPage {
+  min-height: calc(100vh - 80px);
+  background-color: rgb(245, 245, 245);
+}
+.avatar {
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(255, 191, 1, 0.2);
+}
+@media (min-width: 768px) {
+  .avatar {
+    width: 160px;
+    height: 160px;
+  }
+}
