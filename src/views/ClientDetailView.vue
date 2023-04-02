@@ -1,13 +1,16 @@
 <template>
-  <div class="p-4 p-lg-5 fullPage">
-    <button class="btn btn-link text-decoration-none" @click="goToClients">
+  <div v-if="client" class="p-4 p-lg-5 fullPage">
+    <button class="btn btn-link text-decoration-none p-0 mb-2" @click="goToClients">
       &lt; Tornar al llistat de clients
     </button>
-    {{ client }}
+    <ClientDetail :client="client" />
+    <ProductList />
   </div>
 </template>
 
 <script>
+import ClientDetail from '../components/ClientDetail.vue'
+import ProductList from '../components/ProductList.vue'
 import { useClientStore } from '../stores/ClientStore'
 
 export default {
@@ -16,7 +19,10 @@ export default {
     const clientStore = useClientStore()
     return { clientStore }
   },
-
+  components: {
+    ProductList,
+    ClientDetail
+  },
   computed: {
     id() {
       return this.$route.params.id
