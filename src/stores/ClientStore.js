@@ -7,8 +7,8 @@ export const useClientStore = defineStore('ClientStore', {
     clients: []
   }),
   actions: {
-    async getClients() {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}clients`)
+    async getClients(search) {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}clients?q=${search}`)
       this.clients = await response.json()
     },
     redirectToHome() {
