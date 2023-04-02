@@ -7,19 +7,21 @@
       <p class="mb-0 d-none d-lg-block col-lg-2">Telèfon</p>
     </div>
     <div v-for="(client, index) of clients" :key="index" class="mb-1">
-      {{ client }}
+      <ClientListItem :client="client" />
     </div>
   </section>
 </template>
 
 <script>
 import { useClientStore } from '../stores/ClientStore'
+import ClientListItem from './ClientListItem.vue'
 
 export default {
   setup() {
     const clientStore = useClientStore()
     return { clientStore }
   },
+  components: { ClientListItem },
   computed: {
     clients() {
       return this.clientStore.clients
