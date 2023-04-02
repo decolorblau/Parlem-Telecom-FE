@@ -1,8 +1,5 @@
 <template>
   <div class="p-4 p-lg-5 fullPage">
-    <div class="d-flex mt-4 mb-2">
-      <h4>Clients</h4>
-    </div>
     <ClientList />
   </div>
 </template>
