@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <RouterLink to="/"><</RouterLink>
+    <RouterLink to="/">&lt; Back</RouterLink>
     <h1>Pagina dels clients</h1>
   </div>
 </template>
