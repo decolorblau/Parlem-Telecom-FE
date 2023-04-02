@@ -1,41 +1,53 @@
-# parlem-telecom-fe
+# PARLEM TELECOM TEST TÉCNIC FRONT-END
 
-This template should help get you started developing with Vue 3 in Vite.
+Aquest test tècnic està realitzat amb la nova versió de Vue3, que utilitza una compilació basada en Vite, amb Pinia com a gestor dels stores i Bootstrap amb Sass pels estils.
 
-## Recommended IDE Setup
+El projecte consta de dues vistes. Una primera amb una llista de clients i un buscador per filtrar-los. I una segona vista, que és el detall de cada client, on podem trobar la seva fitxa tècnica i una llista amb els productes contractats.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Les dades s'obtenen de l'api creada amb el paquet npm Json Server. Que permet mockejar una REST API amb les teves pròpies dades. Aquest REST API es troba al repositori https://github.com/decolorblau/Parlem-API-REST, està deployada a Cyclic i es pot veure a https://ill-rose-ant-tux.cyclic.app/.
 
-## Customize configuration
+Tot i tractar-se d'un projecte molt petit, on no seria necessari fer servir cap gestor de store, perquè no creixerà més, he volgut simular un projecte que podria créixer en grans dimensions. Per això mateix he utilitzat Pinia com a gestor, ja que, a diferència de Vuex, permet tenir més d'un store a dins el projecte. A més a més, pinia no té mutacions, cosa que també simplifica el codi i permet modificar els estats des de les accions.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Les vistes i els components de Vue estan escrits seguint els principis de disseny KISS, DRY i SOLID. I Vue ens permet organitzar els components de dos formes diferents. He fet ús de l'estil "Options API" és més "rìgid en les formes" però a la vegada molt més ordenat i permet que el component sigui molt més accessible i fàcil d'entendre, sobretot quan es treballa en equip.
 
-## Project Setup
+El disseny i el seu template està fet amb html amb classes de bootstrap 5, i també m'he ajudat de SASS, per aconseguir la personalització en el disseny que desitjava. En aquest cas no he utilitzat BEM per les classes, ja que no ho he necessitat.
 
-```sh
+Per aconseguir un codi net i uns commits organitzats, me ajudat amb Eslint i amb hooks de Husky.
+
+El projecte esta testejat amb Vitest.
+
+## Project setup
+
+```
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Compiles and hot-reloads for development
 
-```sh
-npm run dev
+```
+npm run serve
 ```
 
-### Compile and Minify for Production
+### Compiles and minifies for production
 
-```sh
+```
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### Run unit tests
 
-```sh
-npm run test:unit
+```
+npm test
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Run unit tests with coverage
 
-```sh
+```
+npm run coverage
+```
+
+### Lints and fixes files
+
+```
 npm run lint
 ```
