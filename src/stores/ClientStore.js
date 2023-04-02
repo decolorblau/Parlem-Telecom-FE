@@ -10,14 +10,15 @@ export const useClientStore = defineStore('ClientStore', {
     async getClients() {
       const response = await fetch(`${import.meta.env.VITE_API_URL}clients`)
       this.clients = await response.json()
-    }
-  },
-  getters: {
+    },
     redirectToHome() {
       router.push(paths.home)
     },
     redirectToClientsList() {
       router.push(paths.clients)
     }
+  },
+  getters: {
+    getOneClient: (state) => (id) => state.clients.find((client) => client.customerId === id)
   }
 })
