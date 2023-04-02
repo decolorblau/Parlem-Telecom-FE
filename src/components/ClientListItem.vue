@@ -1,5 +1,5 @@
 <template>
-  <div class="list-item d-flex mb-1 p-2 p-lg-3 row">
+  <div class="list-item d-flex mb-1 p-2 p-lg-3 row" @click="goToDetail">
     <p class="h5 mb-0 col-12 col-md-4">{{ client.givenName }} {{ client.familyName1 }}</p>
     <p class="text-secondary mb-0 col-12 col-lg-3">
       <span class="d-lg-none">Email: </span>{{ client.email }}
@@ -15,10 +15,19 @@
 
 <script>
 export default {
+  name: 'ClientListItem',
   props: {
     client: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    goToDetail() {
+      this.$router.push({
+        name: 'detail',
+        params: { id: this.client.customerId }
+      })
     }
   }
 }
@@ -27,5 +36,6 @@ export default {
 <style>
 .list-item {
   background-color: white !important;
+  cursor: pointer;
 }
 </style>

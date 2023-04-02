@@ -24,7 +24,7 @@ const router = createRouter({
     {
       path: detail,
       name: 'detail',
-      component: () => import('../views/ClientsView.vue')
+      component: () => import('../views/ClientDetailView.vue')
     },
     {
       path: notFound,
