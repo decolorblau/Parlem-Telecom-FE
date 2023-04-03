@@ -14,8 +14,6 @@ El disseny i el seu template està fet amb html amb classes de bootstrap 5, i ta
 
 Per aconseguir un codi net i uns commits organitzats, me ajudat amb Eslint i amb hooks de Husky.
 
-El projecte esta testejat amb Vitest.
-
 ## Project setup
 
 ```
@@ -32,18 +30,6 @@ npm run serve
 
 ```
 npm run build
-```
-
-### Run unit tests
-
-```
-npm test
-```
-
-### Run unit tests with coverage
-
-```
-npm run coverage
 ```
 
 ### Lints and fixes files
