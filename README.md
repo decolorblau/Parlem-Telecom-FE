@@ -1,5 +1,7 @@
 # PARLEM TELECOM TEST TÈCNIC FRONT-END
 
+Pots veure el projecte aquí: https://parlem-test-tecnic-fe-claudia-font-marques.vercel.app/
+
 Aquest test tècnic està realitzat amb la nova versió de Vue3, que utilitza una compilació basada en Vite, amb Pinia com a gestor dels stores i Bootstrap amb Sass pels estils.
 
 El projecte consta de dues vistes. Una primera amb una llista de clients i un buscador per filtrar-los. I una segona vista, que és el detall de cada client, on podem trobar la seva fitxa tècnica i una llista amb els productes contractats.
